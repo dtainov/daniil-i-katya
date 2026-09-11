@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Даниил и Екатерина — Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Главный экран -->
+    <header class="hero">
+        <div class="hero__inner">
+            <p class="hero__invitation">Дорогие гости, приглашаем вас на нашу свадьбу</p>
+            <h1 class="hero__names">Даниил <span class="hero__amp">&amp;</span> Екатерина</h1>
+
+            <div class="photo-section">
+                <img
+                    class="photo-section__img"
+                    src="Фото_Питер.jpg"
+                    alt="Даниил и Екатерина"
+                >
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <!-- 2. Дата и время -->
+        <section class="date-section" id="date">
+            <h2 class="section-title">Дата и время</h2>
+            <p class="date-section__date">12 декабря 2026 года</p>
+        </section>
+
+        <!-- 3. Место проведения -->
+        <section class="venue-section" id="venue">
+            <h2 class="section-title">Место проведения</h2>
+            <p class="venue-section__name">Ресторан «Моменты»</p>
+            <address class="venue-section__address">
+                г. Хабаровск, ул. Постышева, 24
+            </address>
+        </section>
+
+        <!-- 4. Программа дня -->
+        <section class="schedule-section" id="schedule">
+            <h2 class="section-title">Программа дня</h2>
+            <ul class="schedule-list">
+                <li class="schedule-list__item">
+                    <span class="schedule-list__time">17:00</span>
+                    <span class="schedule-list__text">Сбор гостей в ресторане «Моменты»</span>
+                </li>
+                <li class="schedule-list__item">
+                    <span class="schedule-list__time">17:30</span>
+                    <span class="schedule-list__text">Начало мероприятия</span>
+                </li>
+                <li class="schedule-list__item">
+                    <span class="schedule-list__time">0:00</span>
+                    <span class="schedule-list__text">Завершение</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 5. Дресс-код -->
+        <section class="dresscode-section" id="dresscode">
+            <h2 class="section-title">Дресс-код</h2>
+            <p class="dresscode-section__text">
+                Мы за то, чтобы на нашем празднике вам было комфортно, поэтому строгого дресс-кода нет.
+                Выбирайте любой вечерний образ, в котором вам будет красиво и удобно
+            </p>
+        </section>
+
+        <!-- 6. Пожелания для гостей -->
+        <section class="wishes-section" id="wishes">
+            <h2 class="section-title">Пожелания для гостей</h2>
+            <p class="wishes-section__text">
+                Самый ценный подарок для нас — разделить этот день с вами!
+                Вместо материальных подарков будем благодарны за ваш вклад в бюджет нашей новой семьи —
+                пусть он поможет нам осуществить наши планы и мечты!
+            </p>
+        </section>
+
+        <!-- 7. RSVP -->
+        <section class="rsvp-section" id="rsvp">
+            <h2 class="section-title">Подтвердите присутствие</h2>
+            <form class="rsvp-form" id="rsvp-form" action="https://script.google.com/macros/s/AKfycbzWoPMTHkkqNp0MMGRSJ1d7RDKtwJHLPx1kwrMkzku0UM2yOEzzaN__Atbv4JMQ6gpkpA/exec" method="POST" novalidate>
+                <div class="rsvp-form__field">
+                    <label class="rsvp-form__label" for="guest-name">Ваше имя</label>
+                    <input
+                        class="rsvp-form__input"
+                        type="text"
+                        id="guest-name"
+                        name="guestName"
+                        placeholder="Введите ваше имя"
+                        required
+                    >
+                </div>
+
+                <fieldset class="rsvp-form__attendance">
+                    <legend class="rsvp-form__legend">Сможете ли вы прийти?</legend>
+
+                    <label class="rsvp-form__radio">
+                        <input
+                            class="rsvp-form__radio-input"
+                            type="radio"
+                            name="attendance"
+                            value="will-come"
+                            required
+                        >
+                        <span class="rsvp-form__radio-text">Буду</span>
+                    </label>
+
+                    <label class="rsvp-form__radio">
+                        <input
+                            class="rsvp-form__radio-input"
+                            type="radio"
+                            name="attendance"
+                            value="cannot-come"
+                            required
+                        >
+                        <span class="rsvp-form__radio-text">Не смогу прийти</span>
+                    </label>
+                </fieldset>
+
+                <button class="rsvp-form__submit" type="submit">Отправить</button>
+            </form>
+        </section>
+
+        <!-- 8. Таймер обратного отсчета -->
+        <section class="countdown-section" id="countdown">
+            <h2 class="section-title">До нашей свадьбы осталось</h2>
+            <div class="countdown" id="countdown-timer" data-target-date="2026-12-12T17:00:00">
+                <div class="countdown__item">
+                    <span class="countdown__value" id="countdown-days">00</span>
+                    <span class="countdown__label">дней</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__value" id="countdown-hours">00</span>
+                    <span class="countdown__label">часов</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__value" id="countdown-minutes">00</span>
+                    <span class="countdown__label">минут</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__value" id="countdown-seconds">00</span>
+                    <span class="countdown__label">секунд</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Ждём вас с нетерпением! Даниил и Екатерина</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
