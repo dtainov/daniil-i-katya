@@ -30,10 +30,12 @@ html {
 body {
     font-family: var(--font-sans);
     font-size: 16px;
-    font-weight: 300;
-    line-height: 1.7;
+    font-weight: 400;
+    line-height: 1.6;
     color: var(--color-text);
     background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* ============ Главный экран ============ */
@@ -87,10 +89,10 @@ body {
 
 .section-title {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 400;
     text-align: center;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.05em;
     color: var(--color-text);
     margin-bottom: 32px;
 }
@@ -209,7 +211,7 @@ body {
     text-align: center;
     font-size: 1.0625rem;
     color: var(--color-text-muted);
-    font-style: italic;
+    font-style: normal;
 }
 
 /* ============ Форма RSVP ============ */
@@ -248,7 +250,7 @@ body {
     color: var(--color-text);
     background-color: var(--color-bg);
     border: 1px solid var(--color-border);
-    border-radius: 10px;
+    border-radius: 8px;
     outline: none;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -300,7 +302,7 @@ body {
     color: #ffffff;
     background-color: var(--color-accent);
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.25s ease, transform 0.15s ease;
 }
@@ -352,11 +354,10 @@ body {
     align-items: center;
     justify-content: center;
     min-width: 88px;
-    padding: 16px 12px;
-    background-color: var(--color-accent-light);
+    padding: 10px 12px;
+    background-color: transparent;
     border-radius: 12px;
 }
-
 .countdown__value {
     font-family: var(--font-serif);
     font-size: 2.25rem;
@@ -381,8 +382,9 @@ body {
     padding: 40px 20px 48px;
     color: var(--color-text-muted);
     font-family: var(--font-serif);
-    font-style: italic;
     font-size: 1.0625rem;
+    font-style: normal;
+    letter-spacing: 0.05em;
 }
 
 /* ============ Адаптивность ============ */
