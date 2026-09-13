@@ -65,6 +65,7 @@ rsvpForm.addEventListener("submit", function (event) {
     const submitButton = rsvpForm.querySelector(".rsvp-form__submit");
     if (submitButton) {
         submitButton.disabled = true;
+        submitButton.innerHTML = '<span class="spinner"></span> Отправка...';
     }
 
     // Content-Type не задан намеренно: text/plain по умолчанию не вызывает
@@ -84,6 +85,7 @@ rsvpForm.addEventListener("submit", function (event) {
             showRsvpMessage("Произошла ошибка, попробуйте позже");
             if (submitButton) {
                 submitButton.disabled = false;
+                submitButton.textContent = "Отправить";
             }
         });
 });
