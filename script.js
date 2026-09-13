@@ -53,13 +53,19 @@ function showRsvpMessage(text) {
 rsvpForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const guestNameValue = rsvpForm.guestName.value.trim();
     const attendanceInput = rsvpForm.querySelector(
         'input[name="attendance"]:checked'
     );
 
+    // Проверка: если имя пустое или не выбран вариант ответа, отправка не идет
+    if (!guestNameValue || !attendanceInput) {
+        return;
+    }
+
     const data = {
-        guestName: rsvpForm.guestName.value,
-        attendance: attendanceInput ? attendanceInput.value : ""
+        guestName: guestNameValue,
+        attendance: attendanceInput.value
     };
 
     const submitButton = rsvpForm.querySelector(".rsvp-form__submit");
