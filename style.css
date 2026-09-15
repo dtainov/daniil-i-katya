@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prata&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 /* ============ Базовые переменные и сброс ============ */
 
 :root {
@@ -14,7 +13,7 @@
     --shadow-soft: 0 4px 20px rgba(90, 74, 60, 0.08);
     --radius: 16px;
     --font-serif: "Playfair Display", "Georgia", serif;
-    --font-sans: "Prata", "Arial", serif;
+    --font-sans: "Montserrat", "Arial", sans-serif;
 }
 
 * {
