@@ -189,6 +189,23 @@ body {
     color: var(--color-text-muted);
 }
 
+.schedule-list__location {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    opacity: 0.85;
+}
+
+.schedule-list__note {
+    max-width: 460px;
+    margin: 24px auto;
+    text-align: center;
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
 /* ============ Фотография ============ */
 
 .photo-section {
