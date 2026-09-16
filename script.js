@@ -77,17 +77,18 @@ rsvpForm.addEventListener("submit", function (event) {
     // Content-Type не задан намеренно: text/plain по умолчанию не вызывает
     // CORS-preflight, который Google Apps Script не обрабатывает.
     // Тело запроса при этом остаётся JSON-строкой.
-    fetch(rsvpForm.action, {
+        fetch(rsvpForm.action, {
         method: "POST",
+        mode: "no-cors", // Добавляем этот параметр, чтобы обойти блокировку ответа от Google
         body: JSON.stringify(data)
     })
-        .then(function (response) {
-            if (!response.ok) {
-                throw new Error("HTTP " + response.status);
-            }
+        .then(function () {
+            // В режиме no-cors мы не можем прочитать ответ, 
+            // но если запрос дошел без сетевой ошибки, считаем, что всё прошло успешно
             showRsvpMessage("Спасибо за ответ!");
         })
         .catch(function () {
+            // Сюда попадем только если интернета совсем нет или сервер недоступен
             showRsvpMessage("Произошла ошибка, попробуйте позже");
             if (submitButton) {
                 submitButton.disabled = false;
